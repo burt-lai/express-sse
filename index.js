@@ -11,6 +11,7 @@ app.get('/', (req, res) => {
   res.send("Hello /, I'm Express server for SSE!");
 });
 
+let count = 0;
 app.get('/stream', async (req, res) => {
   res.writeHead(200, {
     'Content-Type': 'text/event-stream',
@@ -23,14 +24,15 @@ app.get('/stream', async (req, res) => {
   // res.write('event: connecttime\n');
   // res.write('data: ' + 1000 + '\n\n')
   // res.write('data: ' + new Date() + '\n\n');
-  const mockData = JSON.stringify({
-    name: 'lucy',
-    age: 18,
-  });
-  res.write('data: ' + mockData + '\n\n');
 
   const interval = setInterval(function () {
-    res.write('data: ' + mockData + '\n\n');
+    const data = JSON.stringify({
+      name: 'lucy',
+      age: 18,
+      count: count++,
+    });
+    // console.log(data);
+    res.write('data: ' + data + '\n\n');
   }, 1000);
 });
 
