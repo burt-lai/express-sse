@@ -1,0 +1,24 @@
+{
+  "name": "express-sse",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web3-burt/express-sse.git"
+  },
+  "keywords": [],
+  "author": "web3-burt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/web3-burt/express-sse/issues"
+  },
+  "homepage": "https://github.com/web3-burt/express-sse#readme",
+  "description": "express sse",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
